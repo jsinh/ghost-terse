@@ -1,0 +1,29 @@
+{
+    "name": "ghost-terse",
+    "description": "A clean, minimal theme for the Ghost blogging platform",
+    "version": "4.0.1",
+    "license": "MIT",
+    "author": {
+        "name": "Jaspalsinh Chauhan",
+        "email": "mail.at.jsinh@gmail.com",
+        "url": "https://jsinh.in"
+    },
+    "keywords": [
+        "ghost",
+        "terse",
+        "ghost-theme",
+        "jsinh",
+        "blog"
+    ],
+    "repository": {
+        "type": "github",
+        "url": "https://github.com/jsinh/ghost-terse"
+    },
+    "bugs": {
+        "url": "https://github.com/jsinh/ghost-terse/issues"
+    },
+    "dependencies": {
+        "jquery": "^3.6.4"
+    },
+    "homepage": "https://github.com/jsinh/ghost-terse/README.md"
+}
