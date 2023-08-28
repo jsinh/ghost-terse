@@ -1,0 +1,48 @@
+{{!-- This is a partial file used to generate a post "card"
+which templates loop over to generate a list of posts. --}}
+
+<article class="post-card">
+
+
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="{{url}}">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                    {{#primary_tag}}
+                        <span class="post-card-primary-tag">{{name}}</span>
+                    {{/primary_tag}}
+                    {{#if featured}}
+                        <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
+                    {{/if}}
+                </div>
+                <h2 class="post-card-title">
+                    {{#unless access}}
+                    {{^has visibility="public"}}
+                        {{#unless feature_image}}
+                            {{> "icons/lock"}}
+                        {{/unless}}
+                    {{/has}}
+                    {{/unless}}
+                    {{title}}
+                </h2>
+            </header>
+            {{#if excerpt}}
+                <div class="post-card-excerpt">{{excerpt}}</div>
+            {{/if}}
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            {{#if reading_time}}
+                <span class="post-card-meta-length">{{reading_time}}</span>
+            {{/if}}
+            {{#if @site.comments_enabled}}
+                {{comment_count}}
+            {{/if}}
+        </footer>
+
+    </div>
+
+</article>

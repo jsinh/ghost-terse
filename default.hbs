@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <title>{{meta_title}}</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="canonical" href="{{@site.url}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        data-href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800;900&amp=swap" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap-grid.min.css"
+        integrity="sha512-uzG4YY/dpwIEUrfjYud6T7ieVM06DwkHYiB28wgbtq0w4hSGx3XyDF2Oh/VaxB0hmyxyR3hYHNQc4Chb/dS1Sw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preload" as="script" href="{{asset 'js/site.js'}}" />
+    <link rel="preload" as="style" href="{{asset 'css/screen.css'}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset 'css/screen.css'}}" />
+    {{ghost_head}}
+</head>
+
+<body>
+    <div class="container fluid d-flex flex-column mvh-100">
+        <header class="row justify-content-center">
+            <a class="gh-head-logo{{#unless @site.logo}} no-image{{/unless}}" href="{{@site.url}}">
+                {{#if @site.logo}}
+                <img src="{{@site.logo}}" alt="{{@site.title}}" width="256" height="auto">
+                {{else}}
+                {{@site.title}}
+                {{/if}}
+            </a>
+        </header>
+        <div class="row reset flex-fill flex-column">
+            <div class="col reset">
+                <div class="">
+                    {{{body}}}
+                </div>
+            </div>
+        </div>
+        <footer class="row mg-1-5">
+            <div class="col">
+                <div class="row justify-content-center">
+                    <span class="disclaimer">{{ @custom.site_disclaimer }}</span>
+                </div>
+                <div class="row justify-content-between sm-alt-footer-content-center">
+                    <div class="col-auto">
+                        <span class=""><a href="{{@custom.copyright_link}}" target="_blank"
+                                rel="noopener">{{@custom.copyright_name}}</a>
+                            &copy; {{date format="YYYY"}}</span>
+                    </div>
+                    <div class="col-auto">
+                        <span class="">Powered by: <a href="https://github.com/jsinh/ghost-terse" target="_blank"
+                                rel="noopener">Terse Theme</a> & <a href="https://m.do.co/c/8a6cc3b858ed"
+                                target="_blank" rel="noopener">DigitalOcean</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous">
+        </script>
+    <script src="{{asset 'js/site.js'}}"></script>
+    <script>
+        $(document).ready(function () {
+        });
+    </script>
+    {{ghost_foot}}
+</body>
+
+</html>

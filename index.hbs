@@ -1,0 +1,13 @@
+{{!< default}} <!--Line breaker-->
+    <div class="">
+    </div>
+    <main>
+        <div>
+            <div>
+                {{#foreach posts}}
+                {{> "post-card"}}
+                {{/foreach}}
+            </div>
+            {{pagination}}
+        </div>
+    </main>

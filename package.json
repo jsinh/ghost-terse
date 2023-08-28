@@ -1,0 +1,35 @@
+{
+    "name": "terse",
+    "description": "Terse theme for Ghost Blog - Jsinh",
+    "version": "1.0.1",
+    "engines": {
+        "ghost": ">=0.5.0"
+    },
+    "author": {
+        "name": "Jsinh",
+        "email": "mail.at.jsinh@gmail.com"
+    },
+    "keywords": [
+        "terse",
+        "jsinh",
+        "ghost-theme"
+    ],
+    "config": {
+        "posts_per_page": 3,
+        "card_assets": true,
+        "custom": {
+            "copyright_name": {
+                "type": "text",
+                "default": "Jaspalsinh Chauhan"
+            },
+            "copyright_link": {
+                "type": "text",
+                "default": "https://jsinh.in"
+            },
+            "site_disclaimer": {
+                "type": "text",
+                "default": "The opinions expressed here represent my own and not those of my employer"
+            }
+        }
+    }
+}

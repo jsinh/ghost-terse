@@ -1,0 +1,15 @@
+{{!< default}} <!--Line breaker-->
+    </default>
+    {{#post}}
+    <main>
+        <article>
+            <header>
+                <h1>{{title}}</h1>
+                <p>{{date format="MMM DD, YYYY"}}</p>
+            </header>
+            <section class="gh-content gh-canvas">
+                {{content}}
+            </section>
+        </article>
+    </main>
+    {{/post}}
