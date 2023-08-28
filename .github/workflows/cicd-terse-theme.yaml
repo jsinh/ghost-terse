@@ -17,8 +17,7 @@ jobs:
       - name: "Step | Theme Deploy"
         uses: "TryGhost/action-deploy-theme@v1"
         with:
+          theme-name: "terse"
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}
-          theme-zip: "terse.zip"
-          activate: true
-          continue-on-error: false
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}          
+        continue-on-error: false
