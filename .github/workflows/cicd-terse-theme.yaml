@@ -3,21 +3,22 @@ name: "Ci/CD - Terse Theme"
 on:
   push:
     branches:
-      - main
+      - "main"
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     name: "Build & Push - Terse Theme"
     steps:
       - name: "Step | Checkout Repo"
-        uses: actions/checkout@v3
+        uses: "actions/checkout@v3"
         continue-on-error: false
 
       - name: "Step | Theme Deploy"
         uses: "TryGhost/action-deploy-theme@v1"
         with:
           theme-name: "terse"
-          api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
-          api-key: ${{ secrets.GHOST_ADMIN_API_KEY }}          
+          api-url: "${{ secrets.GHOST_ADMIN_API_URL }}"
+          api-key: "${{ secrets.GHOST_ADMIN_API_KEY }}"
+          exclude: ".devops/* .github/* .gitignore ghost-terse.code-workspace README.md"
         continue-on-error: false
